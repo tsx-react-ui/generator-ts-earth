@@ -19,13 +19,13 @@ import './index.scss'
  * @desc <%= upperCaseName %> Component for mobile
  */
 
-interface <%= upperCaseName %> Props {
+interface <%= upperCaseName %>Props {
     content: string;
     style ?: CSSProperties;
     handle ?: MouseEventHandler<HTMLDivElement>;
 }
 
-export default class <%= upperCaseName %> extends React.Component<<%= upperCaseName %> Props, any> {
+export default class <%= upperCaseName %> extends React.Component<<%= upperCaseName %>Props, any> {
 
     static propTypes = {
         /**
