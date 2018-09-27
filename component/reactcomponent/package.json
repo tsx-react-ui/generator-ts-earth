@@ -32,9 +32,9 @@
         "whatwg-fetch": "2.0.3"
     },
     "scripts": {
-        "start": "ts-component-scripts start",
-        "build": "ts-component-scripts build",
-        "test": "ts-component-scripts test --env=jsdom"
+        "start": "ts-component-script start",
+        "build": "ts-component-script build",
+        "test": "ts-component-script test --env=jsdom"
     },
     "jest": {
         "collectCoverageFrom": [
@@ -85,7 +85,7 @@
         "react": "^16.4.0",
         "react-dom": "^16.4.0",
         "sinon": "^3.2.1",
-        "ts-component-scripts": "^1.0.0",
+        "ts-component-script": "^1.0.0",
         "tslib": "^1.9.3",
         "typescript": "^3.0.3"
     },

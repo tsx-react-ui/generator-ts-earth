@@ -1,6 +1,6 @@
 {
   "name": "generator-ts-earth",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "app/index.js",
   "files": [
@@ -10,7 +10,6 @@
     "common"
   ],
   "scripts": {
-    "prepublishOnly": "nsp check",
     "pretest": "eslint .",
     "test": "jest"
   },
@@ -65,6 +64,13 @@
     "shelljs": "^0.7.8",
     "yeoman-generator": "^2.0.1"
   },
-  "author": "",
+  "author": "maqing01",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tsx-react-ui/generator-ts-earth.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tsx-react-ui/generator-ts-earth/issues"
+  },
   "license": "ISC"
 }
