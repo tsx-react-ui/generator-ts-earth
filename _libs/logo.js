@@ -8,7 +8,7 @@ module.exports = function (context, callback) {
     var version = context ? 'v' + context.pkg.version : '';
 
     var logo = 'Welcome to\n'.magenta
-                + figlet.textSync('TSX Earth').green
+                + figlet.textSync('TSX Earth').green + '\n'
                 + 'Please complete the following operation!\n'.magenta;
 
 

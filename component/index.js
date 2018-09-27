@@ -75,11 +75,6 @@ module.exports = class extends Generator {
                 name: 'H5',
                 value: 'h5'
 
-            },{
-
-                name: 'PC',
-                value: 'pc'
-
             }]
 
         }, {
@@ -162,7 +157,7 @@ module.exports = class extends Generator {
 
             name: 'groupName',
             message: '项目所在 Gitlab 分组',
-            default: 'lm-component',
+            default: 'tsx-react-ui',
             validate: function (input) {
                 return !!input.trim() || '请输入分组名!';
             }
@@ -171,7 +166,7 @@ module.exports = class extends Generator {
 
             name: 'version',
             message: '初始版本号',
-            default: '0.1.0',
+            default: '1.0.0',
             validate: function (input) {
                 return /^\d+\.\d+\.\d+$/.test(input.trim()) || '请输入合法的版本号!';
             }

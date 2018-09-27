@@ -38,7 +38,7 @@ module.exports = class extends Generator {
 
         inquirer.prompt(prompts).then(answer => {
 
-            self.composeWith('earth:' + answer.boilerplateType)
+            self.composeWith('ts-earth:' + answer.boilerplateType)
             done();
 
         });

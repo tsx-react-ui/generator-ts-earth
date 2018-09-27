@@ -7,7 +7,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "http://gitlab.xxx.com/groups/<%= groupName %>/<%= name %>"
+        "url": "git+http://gitub.com/<%= groupName %>/<%= name %>.git"
     },
     "group": "<%= groupName %>",
     "type": "<%= frameType %>",
