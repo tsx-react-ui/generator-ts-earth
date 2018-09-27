@@ -1,11 +1,7 @@
 'use strict';
 
-const fs = require('fs');
-const pwd = process.cwd();
 const path = require('path');
-const mkdirp = require('mkdirp').sync;
 const Generator = require('yeoman-generator');
-const exec = require('child_process').exec;
 
 module.exports = class extends Generator {
 

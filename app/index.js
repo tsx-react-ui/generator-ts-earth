@@ -4,7 +4,7 @@ const Generator = require('yeoman-generator');
 const inquirer = require('inquirer');
 const endTip = require('../_libs/end-tip');
 
-const EarthLogo = require('../_libs/logo.js');
+const EarthLogo = require('../_libs/logo');
 
 module.exports = class extends Generator {
 
