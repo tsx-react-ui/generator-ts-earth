@@ -11,10 +11,10 @@ _<%= desc %>_
 
 ## 安装
 
-`lm-*` 组件使用 `npm` 进行管理，命名空间统一为 `lm-`，请使用以下命令进行组件安装。
+`tsx-*` 组件使用 `npm` 进行管理，命名空间统一为 `tsx-`，请使用以下命令进行组件安装。
 
 ```
-npm i lm-<%= name %> --save
+npm i tsx-<%= name %> --save
 ```
 
 - 如果你还没有安装 `npm`，可通过以下方式进行 [安装](https://nodejs.org/en/download/)。
@@ -70,7 +70,7 @@ npm publish
 
 ## 相关资料
 
-* [lm 组件开发规范](http://)
+* [tsx 组件开发规范](http://)
 
 ---
 
