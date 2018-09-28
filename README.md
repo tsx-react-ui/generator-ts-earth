@@ -8,7 +8,7 @@ webpack + react + typescript 前端脚手架
 ### 使用步骤
 ######step1
 ```
-npm install -g yo generator-ts-earth
+npm install -g yo generator-ts-earth@latest
 ```
 ######step2
 ```

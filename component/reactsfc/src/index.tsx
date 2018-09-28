@@ -31,7 +31,7 @@ const <%= upperCaseName %>: React.SFC<<%= upperCaseName %>Props> = ({
     return (
 
         <div>
-            <p className={`btn ${styles}`} onClick={() => {handle()}}> {content} </p>
+            <p className={`btn ${styles}`} onClick={handle}> {content} </p>
         </div>
 
     )
