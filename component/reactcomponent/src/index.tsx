@@ -21,11 +21,15 @@ import './index.scss'
 
 interface <%= upperCaseName %>Props {
     content: string;
-    style ?: CSSProperties;
+    styles ?: CSSProperties;
     handle ?: MouseEventHandler<HTMLDivElement>;
 }
 
-export default class <%= upperCaseName %> extends React.Component<<%= upperCaseName %>Props, any> {
+interface <%= upperCaseName %>States {
+    isActive: boolean;
+}
+
+export default class <%= upperCaseName %> extends React.Component <<%= upperCaseName %>Props, <%= upperCaseName %>States> {
 
     static propTypes = {
         /**
@@ -41,7 +45,7 @@ export default class <%= upperCaseName %> extends React.Component<<%= upperCaseN
     /**
      * @constructor
      */
-    constructor(props) {
+    constructor(props: <%= upperCaseName %>Props) {
         super(props);
 
         this.state = {

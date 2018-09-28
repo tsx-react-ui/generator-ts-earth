@@ -75,6 +75,11 @@ module.exports = class extends Generator {
                 name: 'H5',
                 value: 'h5'
 
+            }, {
+
+                name: 'PC',
+                value: 'pc'
+
             }]
 
         }, {

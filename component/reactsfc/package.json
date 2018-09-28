@@ -14,7 +14,7 @@
     "keywords": [
         "react",
         "reactsfc",
-        "typescript"
+        "typescript",
         "<%= name %>"
     ],
     "main": "dist/index.js",

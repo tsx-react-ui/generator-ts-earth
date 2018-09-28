@@ -5,25 +5,17 @@
  * GroupName <%= groupName %>
  */
 import * as React from 'react'
-import { CSSProperties, MouseEventHandler } from 'react'
-import * as PropTypes from 'prop-types'
+import { ReactEventHandler } from 'react'
 
-import classNames from 'classnames';
 import './index.scss';
 
 interface <%= upperCaseName %>Props {
     content: string;
-    style ?: CSSProperties;
-    handle ?: MouseEventHandler<HTMLDivElement>;
+    styles ?: string;
+    handle ?: ReactEventHandler<HTMLParagraphElement>;
 }
 
-const propTypes = {
-    content: PropTypes.string.isRequired,
-    styles: PropTypes.string,
-    handle: PropTypes.func
-};
-
-const defaultProps = {
+const defaultProps: <%= upperCaseName %>Props = {
     content: 'React test <%= upperCaseName %>',
     styles: '',
     handle: () => {console.log('handle action');}
@@ -39,14 +31,13 @@ const <%= upperCaseName %>: React.SFC<<%= upperCaseName %>Props> = ({
     return (
 
         <div>
-            <div className={`btn ${styles}`} onClick={() => {handle()}}> {content} </div>
+            <p className={`btn ${styles}`} onClick={() => {handle()}}> {content} </p>
         </div>
 
     )
 
 };
 
-<%= upperCaseName %>.propTypes = propTypes;
 <%= upperCaseName %>.defaultProps = defaultProps;
 
 export default <%= upperCaseName %>;
