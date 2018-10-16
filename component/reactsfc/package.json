@@ -1,5 +1,5 @@
 {
-    "name": "tsx-<%= name %>",
+    "name": "<%= organization %><%= name %>",
     "version": "<%= version %>",
     "author": {
         "name": "<%= author %>",

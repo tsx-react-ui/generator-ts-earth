@@ -162,9 +162,8 @@ module.exports = class extends Generator {
 
             name: 'groupName',
             message: '项目所在 Gitlab 分组',
-            default: 'tsx-react-ui',
             validate: function (input) {
-                return !!input.trim() || '请输入分组名!';
+                return !input || input.trim().length === input.length || '分组名首末不允许有空格!';
             }
 
         }, {
@@ -194,7 +193,8 @@ module.exports = class extends Generator {
             self.desc = answer.componentDesc;
             self.author = answer.author;
             self.email = answer.email;
-            self.groupName = answer.groupName;
+            self.groupName = answer.groupName || answer.author;
+            self.organization = answer.groupName ? '@' + answer.groupName + '/' : '';
             self.version = answer.version;
             self.installDep = answer.installDep;
 
@@ -237,6 +237,7 @@ module.exports = class extends Generator {
                         version: this.version,
                         desc: this.desc,
                         groupName: this.groupName,
+                        organization: this.organization,
                         resetCss: resetCss,
                         flexibleStr: '<%= htmlWebpackPlugin.options.flexibleStr %>'
                     }
