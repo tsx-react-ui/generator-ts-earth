@@ -30,8 +30,7 @@
         "declaration": true
     },
     "files": [
-        "src/index.tsx",
-        "demo/App.tsx"
+        "src/index.tsx"
     ],
     "include": [
         "src/**/*"
