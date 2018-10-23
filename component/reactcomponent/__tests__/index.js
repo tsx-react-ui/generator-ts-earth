@@ -22,7 +22,7 @@ describe('Test <%= upperCaseName %>', () => {
         const wrapper = shallow(component);
         const wrapperClass = wrapper.find('div');
 
-        expect(wrapperClass.length >= 1);
+        expect(wrapperClass.length >= 1).toBe(true);
 
     })
 

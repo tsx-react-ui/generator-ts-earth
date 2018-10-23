@@ -29,6 +29,13 @@
         "noUnusedLocals": true,
         "declaration": true
     },
+    "files": [
+        "src/index.tsx",
+        "demo/App.tsx"
+    ],
+    "include": [
+        "src/**/*"
+    ],
     "exclude": [
         "node_modules",
         "lib",
