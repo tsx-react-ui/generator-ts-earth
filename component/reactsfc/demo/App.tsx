@@ -2,7 +2,11 @@ import * as React from 'react'
 import <%= upperCaseName %> from '../src/index'
 import './index.scss'
 
-export default class App extends React.Component {
+interface StateTypes {
+    content: React.ReactNode;
+    styles: string;
+}
+export default class App extends React.Component<{}, StateTypes> {
 
     constructor(args, context){
         super(args);

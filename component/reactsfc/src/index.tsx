@@ -5,27 +5,24 @@
  * GroupName <%= groupName %>
  */
 import * as React from 'react'
-import { ReactEventHandler } from 'react'
-
 import './index.scss';
 
 interface <%= upperCaseName %>Props {
-    content: string;
-    styles ?: string;
-    handle ?: ReactEventHandler<HTMLParagraphElement>;
+    content: React.ReactNode;
+    styles: string;
+}
+interface DefaultProps {
+    handle?: React.ReactEventHandler<HTMLParagraphElement>;
 }
 
-const defaultProps: <%= upperCaseName %>Props = {
-    content: 'React test <%= upperCaseName %>',
-    styles: '',
+const defaultProps: DefaultProps = {
     handle: () => {console.log('handle action');}
 };
 
-const <%= upperCaseName %>: React.SFC<<%= upperCaseName %>Props> = ({
+const <%= upperCaseName %>: React.SFC<<%= upperCaseName %>Props & DefaultProps> = ({
                 content,
                 styles,
                 handle,
-                ...others
              }) => {
 
     return (

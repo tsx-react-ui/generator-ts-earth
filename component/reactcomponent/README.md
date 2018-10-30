@@ -32,9 +32,14 @@ npm i <%= organization %><%= name %> --save
 最少配置参数为：
 - 传入`content`增加内容
 
-```
+```jsx
 <<%= upperCaseName %> content="React test app" />
 
+```
+详细配置：
+
+```jsx
+<<%= upperCaseName %> content="React test app" styles="custom-style" handle={() => console.log("React test app")} />
 ```
 ### 配置参数
 
@@ -64,7 +69,11 @@ npm run start
 npm run build
 npm publish
 ```
+发布到公开组织
 
+```
+npm publish --access public
+```
 ---
 
 ## 相关资料

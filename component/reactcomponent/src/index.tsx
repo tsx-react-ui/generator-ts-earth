@@ -6,9 +6,6 @@
  */
 
 import * as React from 'react'
-import { CSSProperties, MouseEventHandler } from 'react'
-import * as PropTypes from 'prop-types'
-
 import classNames from 'classnames'
 import './index.scss'
 
@@ -20,32 +17,25 @@ import './index.scss'
  */
 
 interface <%= upperCaseName %>Props {
-    content: string;
-    styles ?: CSSProperties;
-    handle ?: MouseEventHandler<HTMLDivElement>;
+    content: React.ReactNode;
 }
+interface DefaultProps {
+    styles?: React.CSSProperties;
+}
+
 
 interface <%= upperCaseName %>States {
     isActive: boolean;
 }
 
-export default class <%= upperCaseName %> extends React.Component <<%= upperCaseName %>Props, <%= upperCaseName %>States> {
+export default class <%= upperCaseName %> extends React.Component <<%= upperCaseName %>Props & DefaultProps, <%= upperCaseName %>States> {
 
-    static propTypes = {
-        /**
-         * 主内容
-         */
-        content: PropTypes.string.isRequired
-    };
-
-    static defaultProps = {
-        content: 'React test demo'
-    };
+    static defaultProps: DefaultProps = {};
 
     /**
      * @constructor
      */
-    constructor(props: <%= upperCaseName %>Props) {
+    constructor(props: <%= upperCaseName %>Props & DefaultProps) {
         super(props);
 
         this.state = {
@@ -55,24 +45,25 @@ export default class <%= upperCaseName %> extends React.Component <<%= upperCase
         this.handle = this.handle.bind(this);
     }
 
-    componentDidMount() {
+    componentDidMount(): void {
         console.log('componentDidMount');
     }
 
-    componentWillUnmount() {
+    componentWillUnmount(): void {
         console.log('componentWillUnmount');
     }
 
-    handle(){
+    handle(): void{
         this.setState({
             isActive: !this.state.isActive
         });
     }
 
-    render () {
+    render(): JSX.Element {
 
         let {
-            content
+            content,
+            styles
         } = this.props;
         let {
             isActive
@@ -84,7 +75,7 @@ export default class <%= upperCaseName %> extends React.Component <<%= upperCase
         });
 
         return (
-            <div>
+            <div style={styles}>
                 <div className={customClassName} onClick={this.handle}> {content} </div>
             </div>
         )
