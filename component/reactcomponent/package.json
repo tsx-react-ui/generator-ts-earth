@@ -1,15 +1,6 @@
 {
     "name": "<%= organization %><%= name %>",
     "version": "<%= version %>",
-    "author": {
-        "name": "<%= author %>",
-        "email": "<%= email %>"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+http://gitub.com/<%= groupName %>/<%= name %>.git"
-    },
-    "group": "<%= groupName %>",
     "type": "<%= frameType %>",
     "keywords": [
         "earth",
@@ -89,5 +80,15 @@
         "tslib": "^1.9.3",
         "typescript": "^3.0.3"
     },
+    "author": {
+        "name": "<%= author %>",
+        "email": "<%= email %>"
+    },
+    "group": "<%= groupName %>",
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:<%= groupName %>/<%= name %>.git"
+    },
+    "license": "ISC",
     "proxy": "http://localhost:3001/"
 }
